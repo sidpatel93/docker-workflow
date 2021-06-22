@@ -6,4 +6,4 @@ before_install:
   - docker build -t sidpatel/docker-workflow -f dockerfile.dev .
 
 script:
-  - docker run sidpatel/docker-workflow npm run test -- --coverage
+  - docker run -e CI=true sidpatel/docker-workflow npm run test
